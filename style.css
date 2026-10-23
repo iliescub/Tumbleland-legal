@@ -1,0 +1,48 @@
+/* Tumbleland support site: brand tokens from docs/BRAND.md §3 ("sticker toys"). No web fonts, no scripts. */
+:root {
+  --ink: #1F294A;
+  --tangerine: #FA7317;
+  --sky: #389EF7;
+  --sky-light: #BFE3FF;
+  --meadow: #33C799;
+  --cream: #FFF8EF;
+  --muted: #4A5578;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: linear-gradient(var(--sky-light), #EAF6FF 420px) no-repeat, #EAF6FF;
+  color: var(--ink);
+  font: 17px/1.55 ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px 48px; }
+
+header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+header img { width: 72px; height: 72px; border-radius: 18px; border: 3px solid var(--ink); box-shadow: 0 4px 0 var(--ink); }
+header a { color: inherit; text-decoration: none; }
+.wordmark { margin: 0; font-size: 34px; font-weight: 900; color: var(--tangerine); -webkit-text-stroke: 1.5px var(--ink); paint-order: stroke fill; }
+.tagline { margin: 0; color: var(--muted); font-weight: 600; }
+
+nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+nav a {
+  padding: 8px 16px; border: 3px solid var(--ink); border-radius: 14px; box-shadow: 0 3px 0 var(--ink);
+  background: var(--cream); color: var(--ink); font-weight: 800; text-decoration: none;
+}
+nav a[aria-current="page"] { background: var(--sky); color: #fff; }
+
+.card { background: var(--cream); border: 3px solid var(--ink); border-radius: 22px; box-shadow: 0 5px 0 var(--ink); padding: 8px 24px 20px; }
+h2 { font-size: 26px; font-weight: 900; margin: 16px 0 4px; }
+h3 { font-size: 19px; font-weight: 800; margin: 22px 0 4px; }
+p, li { max-width: 65ch; }
+.updated { color: var(--muted); margin-top: 0; }
+.pill { display: inline-block; margin: 4px 6px 0 0; padding: 4px 12px; border-radius: 999px; background: var(--meadow); color: #fff; font-weight: 800; font-size: 15px; }
+a { color: #1D6FC4; }
+footer { margin-top: 28px; color: var(--muted); font-size: 14px; text-align: center; }
+
+@media (max-width: 480px) {
+  .wordmark { font-size: 28px; }
+  .card { padding: 4px 16px 16px; }
+}
